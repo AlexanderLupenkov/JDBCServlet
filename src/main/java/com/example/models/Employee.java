@@ -1,4 +1,4 @@
-package com.example.database.models;
+package com.example.models;
 
 public class Employee {
 
@@ -8,8 +8,14 @@ public class Employee {
     private int salary;
 
 
-    public Employee(int id, int age, String name, int salary) {
+    public Employee(int id, String name, int age, int salary) {
         this.id = id;
+        this.age = age;
+        this.name = name;
+        this.salary = salary;
+    }
+
+    public Employee(String name, int age, int salary) {
         this.age = age;
         this.name = name;
         this.salary = salary;
@@ -18,10 +24,6 @@ public class Employee {
 
     public int getId() {
         return id;
-    }
-
-    public void setId(int id) {
-        this.id = id;
     }
 
     public int getAge() {
